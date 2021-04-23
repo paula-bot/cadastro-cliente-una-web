@@ -1,20 +1,51 @@
 
 <div>
   <form>
-  <label for="nome">Nome: </label>
-  <input type="text" name="nome" [(ngModel)]="cliente.Nome">
-  <label for="cpf">CPF: </label>
-  <input type="text" name="cpf" [(ngModel)]="cliente.CPF"> <br />
+    <table>
+      <tbody>
+        <!-- Linha para nome -->
+        <tr>
+          <td>
+            <label for="nome">Nome: </label>        
+          </td>
+          <td>
+            <input type="text" name="nome" [(ngModel)]="cliente.Nome">
+          </td>
+        </tr>
+        <!-- Linha para cpf -->
+        <tr>
+          <td>
+            <label for="cpf">CPF: </label>        
+          </td>
+          <td>
+            <input type="text" name="cpf" [(ngModel)]="cliente.CPF">
+          </td>
+        </tr>
+        <!-- Linha para endereço -->
+        <tr>
+          <td>
+            <label for="endereco">Endereço: </label>        
+          </td>
+          <td>
+            <input type="text" name="endereco" [(ngModel)]="cliente.Endereco"> <br />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+  
+  
+   <br />
   <label for="cep">CEP: </label>
-  <input type="text" name="cep" [(ngModel)]="cliente.CEP" (blur)="VerificaCEP()">
-  <label for="endereco">Endereço: </label>
-  <input type="text" name="endereco" [(ngModel)]="cliente.Endereco">
+  <input type="text" name="cep" [(ngModel)]="cliente.CEP" (blur)="VerificaCEP()"> <br />
+  
+  
   <label for="bairro">Bairro: </label>
-  <input type="text" name="bairro" [(ngModel)]="cliente.Bairro">
+  <input type="text" name="bairro" [(ngModel)]="cliente.Bairro"> <br />
   <label for="cidade">Cidade: </label>
-  <input type="text" name="cidade" [(ngModel)]="cliente.Cidade">
+  <input type="text" name="cidade" [(ngModel)]="cliente.Cidade"> <br />
   <label for="uf">UF: </label>
-  <input type="text" name="UF" [(ngModel)]="cliente.UF">
+  <input type="text" name="UF" [(ngModel)]="cliente.UF"> <br />
   <div *ngIf="!cliente.CPFValido()">
   CPF Inválido
   </div>
