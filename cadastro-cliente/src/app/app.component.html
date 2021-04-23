@@ -1,0 +1,52 @@
+
+<div>
+  <form>
+  <label for="nome">Nome: </label>
+  <input type="text" name="nome" [(ngModel)]="cliente.Nome">
+  <label for="cpf">CPF: </label>
+  <input type="text" name="cpf" [(ngModel)]="cliente.CPF"> <br />
+  <label for="cep">CEP: </label>
+  <input type="text" name="cep" [(ngModel)]="cliente.CEP" (blur)="VerificaCEP()">
+  <label for="endereco">Endereço: </label>
+  <input type="text" name="endereco" [(ngModel)]="cliente.Endereco">
+  <label for="bairro">Bairro: </label>
+  <input type="text" name="bairro" [(ngModel)]="cliente.Bairro">
+  <label for="cidade">Cidade: </label>
+  <input type="text" name="cidade" [(ngModel)]="cliente.Cidade">
+  <label for="uf">UF: </label>
+  <input type="text" name="UF" [(ngModel)]="cliente.UF">
+  <div *ngIf="!cliente.CPFValido()">
+  CPF Inválido
+  </div>
+  <div>
+  <input type="button" (click)="salvar()" value="Salvar" [disabled]="!cliente.CPFValido()" />
+  </div>
+  </form>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
