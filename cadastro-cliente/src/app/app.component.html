@@ -24,33 +24,59 @@
         <!-- Linha para endereço -->
         <tr>
           <td>
+            <label for="cep">CEP: </label>       
+          </td>
+          <td>
+            <input type="text" name="cep" [(ngModel)]="cliente.CEP" (blur)="VerificaCEP()">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
             <label for="endereco">Endereço: </label>        
           </td>
           <td>
-            <input type="text" name="endereco" [(ngModel)]="cliente.Endereco"> <br />
+            <input type="text" name="endereco" [(ngModel)]="cliente.Endereco">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="bairro">Bairro: </label>        
+          </td>
+          <td>
+            <input type="text" name="bairro" [(ngModel)]="cliente.Bairro"> 
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="cidade">Cidade: </label>        
+          </td>
+          <td>
+            <input type="text" name="cidade" [(ngModel)]="cliente.Cidade"> 
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="uf">UF: </label>        
+          </td>
+          <td>
+            <input type="text" name="UF" [(ngModel)]="cliente.UF"> 
           </td>
         </tr>
       </tbody>
     </table>
-  
-  
-  
-   <br />
-  <label for="cep">CEP: </label>
-  <input type="text" name="cep" [(ngModel)]="cliente.CEP" (blur)="VerificaCEP()"> <br />
-  
-  
-  <label for="bairro">Bairro: </label>
-  <input type="text" name="bairro" [(ngModel)]="cliente.Bairro"> <br />
-  <label for="cidade">Cidade: </label>
-  <input type="text" name="cidade" [(ngModel)]="cliente.Cidade"> <br />
-  <label for="uf">UF: </label>
-  <input type="text" name="UF" [(ngModel)]="cliente.UF"> <br />
-  <div *ngIf="!cliente.CPFValido()">
+    <div *ngIf="!cliente.CPFValido()">
   CPF Inválido
   </div>
   <div>
-  <input type="button" (click)="salvar()" value="Salvar" [disabled]="!cliente.CPFValido()" />
+    <tr>
+      <td>
+        <input type="button" (click)="salvar()" value="Salvar" [disabled]="!cliente.CPFValido()" />
+      </td>
+    </tr>
   </div>
   </form>
  </div>
