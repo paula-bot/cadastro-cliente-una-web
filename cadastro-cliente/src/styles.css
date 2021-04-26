@@ -1,4 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 .mystyle {
-    background-color: rgb(1, 2, 3);
+    background-color: rgba(189, 140, 224, 0.768);
+    margin: 1cm;
+    width: 15cm;
 }
+
+fieldset {
+    background-color: rgb(241, 245, 241);
+    margin: 3cm;
+    height: 8cm;
+    width: 15cm;
+    border-radius: 1cm;
+
+  }
+
+  div {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  
+  input{
+    inline-size: 9cm;
+    margin-left: 1cm;
+  }
+
+  
